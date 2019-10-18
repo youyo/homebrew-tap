@@ -2,23 +2,22 @@
 class Awssh < Formula
   desc "CLI tool to login ec2 instance"
   homepage "https://github.com/youyo/awssh"
-  version "0.2.5"
+  version "0.2.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/youyo/awssh/releases/download/v0.2.5/awssh_0.2.5_Darwin_x86_64.tar.gz"
-    sha256 "68b538f1a4cd754dd63f0be6959722691fae1f9fb4b4fa2a909e521e0574a902"
+    url "https://github.com/youyo/awssh/releases/download/v0.2.6/awssh_0.2.6_Darwin_x86_64.tar.gz"
+    sha256 "12c8e4958a4c62f7187c2d359755c4e15bf9db0e6482f41fa31ef63845f3a94e"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.2.5/awssh_0.2.5_Linux_x86_64.tar.gz"
-      sha256 "6ec7153c71374bd761f8eeee6a82e985a876eea76eafe522d52e96fb73e49292"
+      url "https://github.com/youyo/awssh/releases/download/v0.2.6/awssh_0.2.6_Linux_x86_64.tar.gz"
+      sha256 "7cda49ec297fd776c08cc77eb99ce89a7e13047d006060a937057aaf5b6053e3"
     end
   end
 
   def install
     bin.install "awssh"
-    output = Utils.popen_read("#{bin}/awssh --completion-zsh")
-    (zsh_completion/"_awssh").write output
+    (zsh_completion/"_awssh").write Utils.popen_read("#{bin}/awssh --completion-zsh")
   end
 
   test do
