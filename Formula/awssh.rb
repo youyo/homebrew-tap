@@ -7,17 +7,18 @@ class Awssh < Formula
 
   if OS.mac?
     url "https://github.com/youyo/awssh/releases/download/v0.2.6/awssh_0.2.6_Darwin_x86_64.tar.gz"
-    sha256 "12c8e4958a4c62f7187c2d359755c4e15bf9db0e6482f41fa31ef63845f3a94e"
+    sha256 "9879b27433943eaf8e212a255008ebae897efd7e1ea80d7d6a41d5ca572e37ae"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/youyo/awssh/releases/download/v0.2.6/awssh_0.2.6_Linux_x86_64.tar.gz"
-      sha256 "7cda49ec297fd776c08cc77eb99ce89a7e13047d006060a937057aaf5b6053e3"
+      sha256 "833fd1797d2b3452cfd4914c895559bb3035ef098403acb23136d6138e254797"
     end
   end
 
   def install
     bin.install "awssh"
-    (zsh_completion/"_awssh").write Utils.popen_read("#{bin}/awssh --completion-zsh")
+    output = `#{bin}/awssh --completion-zsh`
+    (zsh_completion/"_awssh").write output
   end
 
   test do
