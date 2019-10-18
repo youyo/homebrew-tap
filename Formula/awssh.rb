@@ -2,23 +2,22 @@
 class Awssh < Formula
   desc "CLI tool to login ec2 instance"
   homepage "https://github.com/youyo/awssh"
-  version "0.2.8"
+  version "0.2.9"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/youyo/awssh/releases/download/v0.2.8/awssh_0.2.8_Darwin_x86_64.tar.gz"
-    sha256 "4eb8c239449e9de4f44f97542da2ed8eead9022a22e78206fd11ab09f2513981"
+    url "https://github.com/youyo/awssh/releases/download/v0.2.9/awssh_0.2.9_Darwin_x86_64.tar.gz"
+    sha256 "63fb473710948214e3197a518d3dc6402ac1aec0d35f24257e12b528a1d88c6f"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.2.8/awssh_0.2.8_Linux_x86_64.tar.gz"
-      sha256 "36d530f61a48ecd7d0e60e9d51cf43f23ef09e753aa928b778440023277bb79a"
+      url "https://github.com/youyo/awssh/releases/download/v0.2.9/awssh_0.2.9_Linux_x86_64.tar.gz"
+      sha256 "ade02ab8ca25f8427f5ebf82ac36a67f325481bd1ff0b402d78a4a480c6555db"
     end
   end
 
   def install
     bin.install "awssh"
-    output = `#{bin}/awssh --completion-zsh`
-    (zsh_completion/"_awssh").write output
+    zsh_completion.install '_awssh'
   end
 
   test do
