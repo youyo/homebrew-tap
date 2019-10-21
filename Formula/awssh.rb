@@ -2,16 +2,16 @@
 class Awssh < Formula
   desc "CLI tool to login ec2 instance"
   homepage "https://github.com/youyo/awssh"
-  version "0.2.9"
+  version "0.2.10"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/youyo/awssh/releases/download/v0.2.9/awssh_0.2.9_Darwin_x86_64.tar.gz"
-    sha256 "63fb473710948214e3197a518d3dc6402ac1aec0d35f24257e12b528a1d88c6f"
+    url "https://github.com/youyo/awssh/releases/download/v0.2.10/awssh_0.2.10_Darwin_x86_64.tar.gz"
+    sha256 "59bedbe53743ee6f3086e0b269d13b374decbddc7af2044f67346885a8a341fb"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.2.9/awssh_0.2.9_Linux_x86_64.tar.gz"
-      sha256 "ade02ab8ca25f8427f5ebf82ac36a67f325481bd1ff0b402d78a4a480c6555db"
+      url "https://github.com/youyo/awssh/releases/download/v0.2.10/awssh_0.2.10_Linux_x86_64.tar.gz"
+      sha256 "6c0f1f8d3c8dc4bdf04d1a1ba41e98905d6b08f7c1027df8881477a731694c21"
     end
   end
 
