@@ -2,16 +2,16 @@
 class Awslogin < Formula
   desc "Login to the AWS management console."
   homepage "https://github.com/youyo/awslogin"
-  version "2.0.5"
+  version "2.0.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/youyo/awslogin/releases/download/v2.0.5/awslogin_2.0.5_Darwin_x86_64.tar.gz"
-    sha256 "309738f151404901148df92740a39b6b6b2a92b23b52a0bd0f3702edbe76cfc4"
+    url "https://github.com/youyo/awslogin/releases/download/v2.0.6/awslogin_2.0.6_Darwin_x86_64.tar.gz"
+    sha256 "3ad29ab304d74db31c150258f8d710e7695714e2809c99349314a4761d5eb494"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awslogin/releases/download/v2.0.5/awslogin_2.0.5_Linux_x86_64.tar.gz"
-      sha256 "57903c41df18b30b2d435e1bf167d5baf85077dff43189311da1c3a5cc3e9a41"
+      url "https://github.com/youyo/awslogin/releases/download/v2.0.6/awslogin_2.0.6_Linux_x86_64.tar.gz"
+      sha256 "dad155a3988219214379a470b1eb119259a0b71020aefcce4489c8cc9e090336"
     end
   end
 
