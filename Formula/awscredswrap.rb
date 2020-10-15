@@ -2,16 +2,16 @@
 class Awscredswrap < Formula
   desc "awscredswrap uses temporary credentials for the specified iam role to set a shell environment variable or execute a command."
   homepage "https://github.com/youyo/awscredswrap"
-  version "0.2.2"
+  version "0.2.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/youyo/awscredswrap/releases/download/v0.2.2/awscredswrap_0.2.2_Darwin_x86_64.tar.gz"
-    sha256 "539348978204cbf7f3862e82b3fa68c79624d6b7c6504a5a2a508d569d8051b1"
+    url "https://github.com/youyo/awscredswrap/releases/download/v0.2.3/awscredswrap_0.2.3_Darwin_x86_64.tar.gz"
+    sha256 "36e89aa7b16fd468b658a9f14b497f72ef22b0f4e550647ed06b8f6d31561625"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awscredswrap/releases/download/v0.2.2/awscredswrap_0.2.2_Linux_x86_64.tar.gz"
-      sha256 "ff05e540f9b7925a6643f90c13cd4f1380f0b225d9869fb7e518edd930577d2f"
+      url "https://github.com/youyo/awscredswrap/releases/download/v0.2.3/awscredswrap_0.2.3_Linux_x86_64.tar.gz"
+      sha256 "4b0f2e56cbcfccd02e5055bfeaea37d0ed96b1354a59a02c9d0bfdad2f886129"
     end
   end
 
