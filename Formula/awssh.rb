@@ -5,21 +5,21 @@
 class Awssh < Formula
   desc "CLI tool to login ec2 instance"
   homepage "https://github.com/youyo/awssh"
-  version "0.3.4"
+  version "0.3.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.4/awssh_0.3.4_Darwin_x86_64.tar.gz"
-      sha256 "e9a66e08297a7a8801a47d8a894219b9cc8860ad8374e431ff60738f835badb4"
+    if Hardware::CPU.arm?
+      url "https://github.com/youyo/awssh/releases/download/v0.3.5/awssh_0.3.5_Darwin_arm64.tar.gz"
+      sha256 "bfec362b4f58bc0f46e2b67008092be51536dff2059188ec3e28757944dcb15a"
 
       def install
         bin.install "awssh"
         zsh_completion.install '_awssh'
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.4/awssh_0.3.4_Darwin_arm64.tar.gz"
-      sha256 "236000c33dfd6ad7beeaa2ca98c7ecae83948fe8eb4f030c5a045cecf0e33cdf"
+    if Hardware::CPU.intel?
+      url "https://github.com/youyo/awssh/releases/download/v0.3.5/awssh_0.3.5_Darwin_x86_64.tar.gz"
+      sha256 "b51ea8ce2d1f2ea47f5e69d63d729385e07ca68461ff8914b3b163d058b763b8"
 
       def install
         bin.install "awssh"
@@ -30,8 +30,8 @@ class Awssh < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.4/awssh_0.3.4_Linux_arm64.tar.gz"
-      sha256 "e27a1ef72990605692df4376f3e0c0ed384643bd2e6284c328e3073ba2b85802"
+      url "https://github.com/youyo/awssh/releases/download/v0.3.5/awssh_0.3.5_Linux_arm64.tar.gz"
+      sha256 "963d427b3205617214e6b4719bd13e5cdd8b66767edcacdd9d5c4af171a22a6c"
 
       def install
         bin.install "awssh"
@@ -39,8 +39,8 @@ class Awssh < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.4/awssh_0.3.4_Linux_x86_64.tar.gz"
-      sha256 "ef356edee825652f35537fb375943e5fa931f781e9d3abb4a10c8ae95951450d"
+      url "https://github.com/youyo/awssh/releases/download/v0.3.5/awssh_0.3.5_Linux_x86_64.tar.gz"
+      sha256 "4c9c3329a89445613a56b635b7676b7e1121f13f5395161dbebd316b18de435c"
 
       def install
         bin.install "awssh"
