@@ -5,26 +5,39 @@
 class Awssh < Formula
   desc "CLI tool to login ec2 instance"
   homepage "https://github.com/youyo/awssh"
-  version "0.3.2"
-  bottle :unneeded
+  version "0.3.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.2/awssh_0.3.2_Darwin_x86_64.tar.gz"
-      sha256 "b7f181380efb3eb285ad2f096894b86052efced863721a2ec00321bd214c4df7"
+      url "https://github.com/youyo/awssh/releases/download/v0.3.3/awssh_0.3.3_Darwin_x86_64.tar.gz"
+      sha256 "1a01535c5129f2bbf176d5580032e74b3d5165dc82cd5a0e145ee3588f17f240"
+
+      def install
+        bin.install "awssh"
+        zsh_completion.install '_awssh'
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.2/awssh_0.3.2_Linux_x86_64.tar.gz"
-      sha256 "8c69fca8b0705f94326a4651d2dab98093c813ede6d8828654c8767b9bb4e8b9"
-    end
-  end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/youyo/awssh/releases/download/v0.3.3/awssh_0.3.3_Linux_arm64.tar.gz"
+      sha256 "998af22a32ecf59c9931431c805f19221a688a6693925190c1b81a7f57e843a3"
 
-  def install
-    bin.install "awssh"
-    zsh_completion.install '_awssh'
+      def install
+        bin.install "awssh"
+        zsh_completion.install '_awssh'
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/youyo/awssh/releases/download/v0.3.3/awssh_0.3.3_Linux_x86_64.tar.gz"
+      sha256 "5d6828a1d5a1084c39bc32807efa8b72cd4c95281681f871b9fa44e9336407ce"
+
+      def install
+        bin.install "awssh"
+        zsh_completion.install '_awssh'
+      end
+    end
   end
 
   test do
