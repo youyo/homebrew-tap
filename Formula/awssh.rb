@@ -5,12 +5,21 @@
 class Awssh < Formula
   desc "CLI tool to login ec2 instance"
   homepage "https://github.com/youyo/awssh"
-  version "0.3.3"
+  version "0.3.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.3/awssh_0.3.3_Darwin_x86_64.tar.gz"
-      sha256 "1a01535c5129f2bbf176d5580032e74b3d5165dc82cd5a0e145ee3588f17f240"
+      url "https://github.com/youyo/awssh/releases/download/v0.3.4/awssh_0.3.4_Darwin_x86_64.tar.gz"
+      sha256 "e9a66e08297a7a8801a47d8a894219b9cc8860ad8374e431ff60738f835badb4"
+
+      def install
+        bin.install "awssh"
+        zsh_completion.install '_awssh'
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/youyo/awssh/releases/download/v0.3.4/awssh_0.3.4_Darwin_arm64.tar.gz"
+      sha256 "236000c33dfd6ad7beeaa2ca98c7ecae83948fe8eb4f030c5a045cecf0e33cdf"
 
       def install
         bin.install "awssh"
@@ -21,8 +30,8 @@ class Awssh < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.3/awssh_0.3.3_Linux_arm64.tar.gz"
-      sha256 "998af22a32ecf59c9931431c805f19221a688a6693925190c1b81a7f57e843a3"
+      url "https://github.com/youyo/awssh/releases/download/v0.3.4/awssh_0.3.4_Linux_arm64.tar.gz"
+      sha256 "e27a1ef72990605692df4376f3e0c0ed384643bd2e6284c328e3073ba2b85802"
 
       def install
         bin.install "awssh"
@@ -30,8 +39,8 @@ class Awssh < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.3/awssh_0.3.3_Linux_x86_64.tar.gz"
-      sha256 "5d6828a1d5a1084c39bc32807efa8b72cd4c95281681f871b9fa44e9336407ce"
+      url "https://github.com/youyo/awssh/releases/download/v0.3.4/awssh_0.3.4_Linux_x86_64.tar.gz"
+      sha256 "ef356edee825652f35537fb375943e5fa931f781e9d3abb4a10c8ae95951450d"
 
       def install
         bin.install "awssh"
