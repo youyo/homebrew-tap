@@ -5,12 +5,12 @@
 class Awssh < Formula
   desc "CLI tool to login ec2 instance"
   homepage "https://github.com/youyo/awssh"
-  version "0.3.5"
+  version "0.3.6"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.5/awssh_0.3.5_Darwin_arm64.tar.gz"
-      sha256 "bfec362b4f58bc0f46e2b67008092be51536dff2059188ec3e28757944dcb15a"
+      url "https://github.com/youyo/awssh/releases/download/v0.3.6/awssh_0.3.6_Darwin_arm64.tar.gz"
+      sha256 "f4b11c3a2cdcee81cf3a552573dd3a6f1c24502dfd8d60b910e631a1fa450877"
 
       def install
         bin.install "awssh"
@@ -18,8 +18,8 @@ class Awssh < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.5/awssh_0.3.5_Darwin_x86_64.tar.gz"
-      sha256 "b51ea8ce2d1f2ea47f5e69d63d729385e07ca68461ff8914b3b163d058b763b8"
+      url "https://github.com/youyo/awssh/releases/download/v0.3.6/awssh_0.3.6_Darwin_x86_64.tar.gz"
+      sha256 "294fe9f3ceb0f80adf0d1dabbc2cbdeb9c3827f61c4f16073d50b17bdc2585ed"
 
       def install
         bin.install "awssh"
@@ -30,8 +30,8 @@ class Awssh < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.5/awssh_0.3.5_Linux_arm64.tar.gz"
-      sha256 "963d427b3205617214e6b4719bd13e5cdd8b66767edcacdd9d5c4af171a22a6c"
+      url "https://github.com/youyo/awssh/releases/download/v0.3.6/awssh_0.3.6_Linux_arm64.tar.gz"
+      sha256 "c1e64e391b057687412c588514fcbf2313b1a0bc4822fa03b5d4de6835e969e8"
 
       def install
         bin.install "awssh"
@@ -39,8 +39,8 @@ class Awssh < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awssh/releases/download/v0.3.5/awssh_0.3.5_Linux_x86_64.tar.gz"
-      sha256 "4c9c3329a89445613a56b635b7676b7e1121f13f5395161dbebd316b18de435c"
+      url "https://github.com/youyo/awssh/releases/download/v0.3.6/awssh_0.3.6_Linux_x86_64.tar.gz"
+      sha256 "0d4e1db299e3c5e4f993ad0bdf057d42b3b7beb3ff09c9e6218b01f8eaaa901b"
 
       def install
         bin.install "awssh"
