@@ -5,21 +5,21 @@
 class Bundr < Formula
   desc "AWS Parameter Store と Secrets Manager を統合する単一バイナリ Go CLI"
   homepage "https://github.com/youyo/bundr"
-  version "0.4.5"
+  version "0.4.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/bundr/releases/download/v0.4.5/bundr_0.4.5_darwin_amd64.tar.gz"
-      sha256 "77cbbcb8530e6719ed980bef887a38aafb185d33fb3c846680495fd187f421dd"
+      url "https://github.com/youyo/bundr/releases/download/v0.4.6/bundr_0.4.6_darwin_amd64.tar.gz"
+      sha256 "f59ee34366e2d33e615dc8d63f80224fcd82228bf36912f84e0f2ec5304f8bac"
 
       define_method(:install) do
         bin.install "bundr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/bundr/releases/download/v0.4.5/bundr_0.4.5_darwin_arm64.tar.gz"
-      sha256 "20b8aea7d29adc52859fda2a0af174abd6c4ba2dc76ef87a6ed4c42c5c12fa72"
+      url "https://github.com/youyo/bundr/releases/download/v0.4.6/bundr_0.4.6_darwin_arm64.tar.gz"
+      sha256 "9dad098e1de0fb964472c6ea5206f301330ebc6618ce33cc49f4a31f4751c0fa"
 
       define_method(:install) do
         bin.install "bundr"
@@ -29,15 +29,15 @@ class Bundr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/bundr/releases/download/v0.4.5/bundr_0.4.5_linux_amd64.tar.gz"
-      sha256 "0bcce365bc17c27c8d6b3ee24de4f1d998d5fdab0e6bd61be839c75f352bf9fa"
+      url "https://github.com/youyo/bundr/releases/download/v0.4.6/bundr_0.4.6_linux_amd64.tar.gz"
+      sha256 "aab2c8a8a70cca3964c11d9b29617505a2a92997db8b9086f1d6aba5d163b0f0"
       define_method(:install) do
         bin.install "bundr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/bundr/releases/download/v0.4.5/bundr_0.4.5_linux_arm64.tar.gz"
-      sha256 "45fc1492d928cd3756b9833fd8593f8978f7a7b97fd29eb7126fbe9010ccb4c1"
+      url "https://github.com/youyo/bundr/releases/download/v0.4.6/bundr_0.4.6_linux_arm64.tar.gz"
+      sha256 "537d584c852cce2772776068cbb2bcf63446eb4203518ac2d341cfd0287ffde1"
       define_method(:install) do
         bin.install "bundr"
       end
