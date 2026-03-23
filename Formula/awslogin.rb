@@ -5,21 +5,21 @@
 class Awslogin < Formula
   desc "Generate AWS Management Console login URL"
   homepage "https://github.com/youyo/awslogin"
-  version "3.2.1"
+  version "3.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/awslogin/releases/download/v3.2.1/awslogin_3.2.1_darwin_amd64.tar.gz"
-      sha256 "6ff8286ba9f0447fe5daed5cd098cb286405344fefb5f24a6868e6487ff37138"
+      url "https://github.com/youyo/awslogin/releases/download/v3.3.0/awslogin_3.3.0_darwin_amd64.tar.gz"
+      sha256 "08b3536bcc56356a93f0af316b6b74ef685d171cdb513dd47c94b0b4022ef8c6"
 
       define_method(:install) do
         bin.install "awslogin"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/awslogin/releases/download/v3.2.1/awslogin_3.2.1_darwin_arm64.tar.gz"
-      sha256 "06c742fc5d75699bc581cd6663d4abbe33a59987a2880d4a8bca499bcd561eb6"
+      url "https://github.com/youyo/awslogin/releases/download/v3.3.0/awslogin_3.3.0_darwin_arm64.tar.gz"
+      sha256 "c6e76af2d50e75b9f7697892c836f6f655735a19dce088abcb8ae979badd5fcd"
 
       define_method(:install) do
         bin.install "awslogin"
@@ -29,15 +29,15 @@ class Awslogin < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/awslogin/releases/download/v3.2.1/awslogin_3.2.1_linux_amd64.tar.gz"
-      sha256 "002611c4a300a51b67bc4a510df773e2bf8fd78c1a7edb4c6c6e8ac023be2673"
+      url "https://github.com/youyo/awslogin/releases/download/v3.3.0/awslogin_3.3.0_linux_amd64.tar.gz"
+      sha256 "661d7b732314427b52ba55eb3b621b36d3b51f3005f8c6f001b31993f25ec5ed"
       define_method(:install) do
         bin.install "awslogin"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/awslogin/releases/download/v3.2.1/awslogin_3.2.1_linux_arm64.tar.gz"
-      sha256 "b389fa89741811d9fa3633de4e3d1296f1e8e504d5983d6da98aba21487d55bc"
+      url "https://github.com/youyo/awslogin/releases/download/v3.3.0/awslogin_3.3.0_linux_arm64.tar.gz"
+      sha256 "39ca8bb621fac5b2783767b7992ff37c2fded27065963a745c34f3b21b863276"
       define_method(:install) do
         bin.install "awslogin"
       end
