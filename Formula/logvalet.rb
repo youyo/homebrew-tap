@@ -5,21 +5,21 @@
 class Logvalet < Formula
   desc "LLM-first Backlog CLI with digest-oriented output"
   homepage "https://github.com/youyo/logvalet"
-  version "0.1.12"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/logvalet/releases/download/v0.1.12/logvalet_0.1.12_Darwin_x86_64.tar.gz"
-      sha256 "23a6f7203621a08636564d7bd65e1a537e6b9f4331160114642b051d3445473d"
+      url "https://github.com/youyo/logvalet/releases/download/v0.2.0/logvalet_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "63ec3d696ba0efef2b6c74faa169076c6ff082be2edfc0a8a06a8d2a24d5134f"
 
       define_method(:install) do
         bin.install "logvalet"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/logvalet/releases/download/v0.1.12/logvalet_0.1.12_Darwin_arm64.tar.gz"
-      sha256 "8d0445eff8ce421cd95c3e005c9593dd191214cf496b0d667df7d5e7db70b41e"
+      url "https://github.com/youyo/logvalet/releases/download/v0.2.0/logvalet_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "f8fcf4e68a83277e8e849c2acc984769d25d72eac751378cc3e0ef968fd5a8e6"
 
       define_method(:install) do
         bin.install "logvalet"
@@ -29,15 +29,15 @@ class Logvalet < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/logvalet/releases/download/v0.1.12/logvalet_0.1.12_Linux_x86_64.tar.gz"
-      sha256 "85d64e82efcac104ec53b2d13408cf2475c39aa5282a0a711c719bc374a80bd7"
+      url "https://github.com/youyo/logvalet/releases/download/v0.2.0/logvalet_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "44822d302032be0027e872d6ad11d6b4db578c3379c00714767ffcd8a283827b"
       define_method(:install) do
         bin.install "logvalet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/logvalet/releases/download/v0.1.12/logvalet_0.1.12_Linux_arm64.tar.gz"
-      sha256 "c7c377c60c8631ceba049591718f9e8df82b6a0207bef32e13ff2de37a60aeb7"
+      url "https://github.com/youyo/logvalet/releases/download/v0.2.0/logvalet_0.2.0_Linux_arm64.tar.gz"
+      sha256 "d12fbab94aee70951ac0770cec1a2dca5068b9a9728a6b8c058eb7fa33542213"
       define_method(:install) do
         bin.install "logvalet"
       end
