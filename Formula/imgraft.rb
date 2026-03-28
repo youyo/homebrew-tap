@@ -5,21 +5,21 @@
 class Imgraft < Formula
   desc "Transparent image asset generator for LLM coding agents"
   homepage "https://github.com/youyo/imgraft"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/imgraft/releases/download/v0.1.0/imgraft_darwin_x86_64.zip"
-      sha256 "ce7c31282f7d2e0e935ccc21bc4ed660ed3ce456816d205ef05bf76827371534"
+      url "https://github.com/youyo/imgraft/releases/download/v0.1.1/imgraft_darwin_x86_64.zip"
+      sha256 "f18f686dcfc6b989a11ba30492745ef6f8025146276d2254c87a92f3c092a97d"
 
       define_method(:install) do
         bin.install "imgraft"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/imgraft/releases/download/v0.1.0/imgraft_darwin_arm64.zip"
-      sha256 "b13bb11829d7d4b8630267d94d1525cc08c4d6a48768b22f4ba74f05a59cf3fd"
+      url "https://github.com/youyo/imgraft/releases/download/v0.1.1/imgraft_darwin_arm64.zip"
+      sha256 "6a1700c8993f486f88b1b87775ba68f8d6ad091d775b3ab53ba3319fb79a30b6"
 
       define_method(:install) do
         bin.install "imgraft"
@@ -29,15 +29,15 @@ class Imgraft < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/imgraft/releases/download/v0.1.0/imgraft_linux_x86_64.tar.gz"
-      sha256 "8e8bb7c728fd0b058739523dbe7e9b225bab22ddf4360c84f0525f3b4ae63d00"
+      url "https://github.com/youyo/imgraft/releases/download/v0.1.1/imgraft_linux_x86_64.tar.gz"
+      sha256 "8a9a3b48dc2f62cf5b1263e58ab63954a66a665c6c5b7d0e4d8e4cec000d0dee"
       define_method(:install) do
         bin.install "imgraft"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/imgraft/releases/download/v0.1.0/imgraft_linux_arm64.tar.gz"
-      sha256 "e7f382d61cef8421a86c4a0f6061cba8de87dec3ad082a26c3a6d2f6f817b1cb"
+      url "https://github.com/youyo/imgraft/releases/download/v0.1.1/imgraft_linux_arm64.tar.gz"
+      sha256 "c940eab00179c25e5e1598d455243c4df629a39314b736bd3a41073dac7cc4da"
       define_method(:install) do
         bin.install "imgraft"
       end
