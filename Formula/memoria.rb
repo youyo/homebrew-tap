@@ -5,13 +5,13 @@
 class Memoria < Formula
   desc "Claude Code 向けプロジェクト認識型ローカル RAG メモリシステム"
   homepage "https://github.com/youyo/memoria"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/memoria/releases/download/v0.2.2/memoria_0.2.2_darwin_amd64.tar.gz"
-      sha256 "494a224e540e12c54835a7a8f47eb20a7ab595d4c2738c3c89dffe1688abbcfc"
+      url "https://github.com/youyo/memoria/releases/download/v0.2.3/memoria_0.2.3_darwin_amd64.tar.gz"
+      sha256 "9a2e95add0dad86e5b97326c75c8af4ff2e7c34417507ead934167717dd36fdd"
 
       define_method(:install) do
         bin.install "memoria"
@@ -19,8 +19,8 @@ class Memoria < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/memoria/releases/download/v0.2.2/memoria_0.2.2_darwin_arm64.tar.gz"
-      sha256 "f530c6a9cb4ba09e892f96e1e7dc215461f1d36bf463bc944735d0e6b1cc3abc"
+      url "https://github.com/youyo/memoria/releases/download/v0.2.3/memoria_0.2.3_darwin_arm64.tar.gz"
+      sha256 "d8f0c1da5e6efa9dc7f4e38ea4e32b1af37c11e82563753f47d90ac4ffc60a55"
 
       define_method(:install) do
         bin.install "memoria"
@@ -31,16 +31,16 @@ class Memoria < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/memoria/releases/download/v0.2.2/memoria_0.2.2_linux_amd64.tar.gz"
-      sha256 "2eb7ef0a05f26ae3e2fb91faa8888e137807726ca2a50a0c226ee31b3cb4270c"
+      url "https://github.com/youyo/memoria/releases/download/v0.2.3/memoria_0.2.3_linux_amd64.tar.gz"
+      sha256 "3cde782e75c2fe9a52942c7f316c571c9715a5970a5bca107ccd53ff92db74cc"
       define_method(:install) do
         bin.install "memoria"
         (libexec/"python").install Dir["python/*"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/memoria/releases/download/v0.2.2/memoria_0.2.2_linux_arm64.tar.gz"
-      sha256 "7040e491f512a75618fa13916adb75e5ecab18abab935fe09ea8ee9fae42af21"
+      url "https://github.com/youyo/memoria/releases/download/v0.2.3/memoria_0.2.3_linux_arm64.tar.gz"
+      sha256 "103da781c96ec0ecde1de2424d01765ed9bfd3102ab5bee9394afd39c83bea61"
       define_method(:install) do
         bin.install "memoria"
         (libexec/"python").install Dir["python/*"]
