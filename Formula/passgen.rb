@@ -5,21 +5,21 @@
 class Passgen < Formula
   desc "Simple and secure password generator CLI tool"
   homepage "https://github.com/youyo/passgen"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/passgen/releases/download/v0.1.1/passgen_0.1.1_darwin_amd64.zip"
-      sha256 "7b1f7a9cf3753b48edef64493504dadf942e715ac88edc87a2e84826cd59ee79"
+      url "https://github.com/youyo/passgen/releases/download/v0.1.2/passgen_0.1.2_darwin_amd64.zip"
+      sha256 "b84bbcb3f51ce0deb2e1023851a8c47b9b928f6b022fb0d7a997d895436d9ab3"
 
       define_method(:install) do
         bin.install "passgen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/passgen/releases/download/v0.1.1/passgen_0.1.1_darwin_arm64.zip"
-      sha256 "60f4c872213a776d4304450c788bb57ec53d6c14c9a65f1e509f8630a6699f12"
+      url "https://github.com/youyo/passgen/releases/download/v0.1.2/passgen_0.1.2_darwin_arm64.zip"
+      sha256 "9700378278ea1040a5037da2116572dbc75bd0d8a6abbdc0404a62f203f054d7"
 
       define_method(:install) do
         bin.install "passgen"
@@ -29,8 +29,8 @@ class Passgen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/passgen/releases/download/v0.1.1/passgen_0.1.1_linux_amd64.tar.gz"
-      sha256 "9906869a89c0250ecb48d35f09cc938c8efe05ecaae6a1823fa1bf8bf23ac839"
+      url "https://github.com/youyo/passgen/releases/download/v0.1.2/passgen_0.1.2_linux_amd64.tar.gz"
+      sha256 "0f9539cf2877dc1d7391c48b3d2ed44451e9fc7e94843e3af3bccfbe63ff0a62"
       define_method(:install) do
         bin.install "passgen"
       end
