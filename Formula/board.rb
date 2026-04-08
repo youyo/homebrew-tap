@@ -5,21 +5,21 @@
 class Board < Formula
   desc "BOARD API CLI + local MCP server"
   homepage "https://github.com/youyo/board"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/board/releases/download/v0.1.0/board_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "153b10d2de3f4363d8d88bb1368195c928624c07ed693e125f6d311bb144a7ad"
+      url "https://github.com/youyo/board/releases/download/v0.1.1/board_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "c6d4186042b7036078cd0b15649142a15d35ee724efe47b279790966f26cb339"
 
       define_method(:install) do
         bin.install "board"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/board/releases/download/v0.1.0/board_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "0eefe015925a80469723eb8afc368d7010fab3b7baaa230159715ecc97c77e16"
+      url "https://github.com/youyo/board/releases/download/v0.1.1/board_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "2d9be4fb690b53589bc078ae45b6e5c719cd73ea15aa80fb6f1c3fcab42ae3b4"
 
       define_method(:install) do
         bin.install "board"
@@ -29,15 +29,15 @@ class Board < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/board/releases/download/v0.1.0/board_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "baf1adb560fdf19edae7c7b6301cf267da282144e1d9888315ccc4e3dc76baa7"
+      url "https://github.com/youyo/board/releases/download/v0.1.1/board_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "d0ecd982fef04317a9c9760dbc4b7307e7dfe0d3a15e01999a1b5a4a21812a72"
       define_method(:install) do
         bin.install "board"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/board/releases/download/v0.1.0/board_0.1.0_Linux_arm64.tar.gz"
-      sha256 "3b6bee55558287685be6bdca965c257ee32730313764527563e65100dda3b5ee"
+      url "https://github.com/youyo/board/releases/download/v0.1.1/board_0.1.1_Linux_arm64.tar.gz"
+      sha256 "c560f6bf717a457699cd6c23ddbea23214ddb16eb73ffd9dfa04e8ed8de88e09"
       define_method(:install) do
         bin.install "board"
       end
