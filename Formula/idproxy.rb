@@ -5,21 +5,21 @@
 class Idproxy < Formula
   desc "idproxy - Identity-aware reverse proxy with OAuth 2.1"
   homepage "https://github.com/youyo/idproxy"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/idproxy/releases/download/v0.3.0/idproxy_0.3.0_darwin_amd64.tar.gz"
-      sha256 "576bb8daefcb51ab0318d643fa47af32cd447dd7853b7f986d3be094c59faef8"
+      url "https://github.com/youyo/idproxy/releases/download/v0.3.1/idproxy_0.3.1_darwin_amd64.tar.gz"
+      sha256 "6a842bdad424e8e8d6f6b66950ff2590c1b0012eb4216429306007dbb60bb7a0"
 
       define_method(:install) do
         bin.install "idproxy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/idproxy/releases/download/v0.3.0/idproxy_0.3.0_darwin_arm64.tar.gz"
-      sha256 "b0563b09fd36b2a663d83319b95e06b33ff77dae0b7cd6e711f3d8db237a135e"
+      url "https://github.com/youyo/idproxy/releases/download/v0.3.1/idproxy_0.3.1_darwin_arm64.tar.gz"
+      sha256 "621aa3f6ccda7799ef0047167e150a1e8d284e396442d5a4e9d9645e8383ea66"
 
       define_method(:install) do
         bin.install "idproxy"
@@ -29,15 +29,15 @@ class Idproxy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/idproxy/releases/download/v0.3.0/idproxy_0.3.0_linux_amd64.tar.gz"
-      sha256 "37cba04f3c82109241c2384d191e58785b7d820bf27ed4497b3381a4856d1af2"
+      url "https://github.com/youyo/idproxy/releases/download/v0.3.1/idproxy_0.3.1_linux_amd64.tar.gz"
+      sha256 "2cde480a65dccbf01a0aabf778f35c2e82edd632ed6e3f3be5cbe500e47dcd70"
       define_method(:install) do
         bin.install "idproxy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/idproxy/releases/download/v0.3.0/idproxy_0.3.0_linux_arm64.tar.gz"
-      sha256 "d581a90766e2f8ff10fe97ac29747025a80df41d261b4ef5819adfd1a7b7489b"
+      url "https://github.com/youyo/idproxy/releases/download/v0.3.1/idproxy_0.3.1_linux_arm64.tar.gz"
+      sha256 "434f61d390a1132748a87943fc518c518fed135b047d53262b84a9e1444ef424"
       define_method(:install) do
         bin.install "idproxy"
       end
