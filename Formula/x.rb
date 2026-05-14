@@ -5,21 +5,21 @@
 class X < Formula
   desc "X (Twitter) API CLI and Remote MCP server"
   homepage "https://github.com/youyo/x"
-  version "0.3.1"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/x/releases/download/v0.3.1/x_0.3.1_Darwin_x86_64.tar.gz"
-      sha256 "5e2874e4c81275d52db7b1e1d1473ca02dd0fdef796c68e307e586155ce9c295"
+      url "https://github.com/youyo/x/releases/download/v0.4.0/x_0.4.0_Darwin_x86_64.tar.gz"
+      sha256 "5a55c06e568c0dbe8859f8d395eedbad0cfc3a81454d1b410c8043333baa440d"
 
       define_method(:install) do
         bin.install "x"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/x/releases/download/v0.3.1/x_0.3.1_Darwin_arm64.tar.gz"
-      sha256 "402beab312f45109977cc2c5b91f1a8cef2ad98ab4393ccd338a51f3557ad828"
+      url "https://github.com/youyo/x/releases/download/v0.4.0/x_0.4.0_Darwin_arm64.tar.gz"
+      sha256 "57523d1801a54719fd7cbd6889041ed8e135fb6bd762cf7f7428f2630ab52649"
 
       define_method(:install) do
         bin.install "x"
@@ -29,15 +29,15 @@ class X < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/x/releases/download/v0.3.1/x_0.3.1_Linux_x86_64.tar.gz"
-      sha256 "be5e06d1080f693d4c4ffb7d52f50540c77229c5c3aeaf7d8ab66ee56a5ec983"
+      url "https://github.com/youyo/x/releases/download/v0.4.0/x_0.4.0_Linux_x86_64.tar.gz"
+      sha256 "4d7439946fab0ec8a98eebe14a36dde4d7851401500eea9949a7c5be8ac23958"
       define_method(:install) do
         bin.install "x"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/x/releases/download/v0.3.1/x_0.3.1_Linux_arm64.tar.gz"
-      sha256 "02f2c987580ce16ad1c59d17cf273dd4e35edc8a6dca0aa2ca77fce4fbca2742"
+      url "https://github.com/youyo/x/releases/download/v0.4.0/x_0.4.0_Linux_arm64.tar.gz"
+      sha256 "e6406dbc23a8e4bb1d09b69678c9f4b62b13413e067787bfc58ba9cd8716d5c7"
       define_method(:install) do
         bin.install "x"
       end
