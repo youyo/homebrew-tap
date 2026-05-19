@@ -5,21 +5,21 @@
 class Kintone < Formula
   desc "kintone CLI / MCP server"
   homepage "https://github.com/youyo/kintone"
-  version "0.5.4"
+  version "0.5.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/kintone/releases/download/v0.5.4/kintone_0.5.4_Darwin_x86_64.tar.gz"
-      sha256 "cabf013680ce8e5f658f8837ff3f59b19e7a4b098186bed91575a0948daf6c9a"
+      url "https://github.com/youyo/kintone/releases/download/v0.5.5/kintone_0.5.5_Darwin_x86_64.tar.gz"
+      sha256 "bf6f179ca16aa78ba1144059d876b00e1185088bbca4be0eb1abedd26888f0cf"
 
       define_method(:install) do
         bin.install "kintone"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/kintone/releases/download/v0.5.4/kintone_0.5.4_Darwin_arm64.tar.gz"
-      sha256 "9ecdac656bd940c9c0a10374ff1b2cc9d5f790e6469375a932028342289a08d9"
+      url "https://github.com/youyo/kintone/releases/download/v0.5.5/kintone_0.5.5_Darwin_arm64.tar.gz"
+      sha256 "23dbf28d4d7579c5573a193156fc62378ec178d669790cd36e474794c005e7cc"
 
       define_method(:install) do
         bin.install "kintone"
@@ -29,15 +29,15 @@ class Kintone < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/kintone/releases/download/v0.5.4/kintone_0.5.4_Linux_x86_64.tar.gz"
-      sha256 "c5c1e12a7c5298d0dbdc1b2a62245cbdad512e4edd53126d477a72729cdba826"
+      url "https://github.com/youyo/kintone/releases/download/v0.5.5/kintone_0.5.5_Linux_x86_64.tar.gz"
+      sha256 "bb28b6c175d024d57512846328e91570b25684a5e75cd2c2e98595e0c4b548a7"
       define_method(:install) do
         bin.install "kintone"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/kintone/releases/download/v0.5.4/kintone_0.5.4_Linux_arm64.tar.gz"
-      sha256 "a706de26aee004f68d920dd8a38aa12341baed9f3633bccd32370bf34ed1f4a8"
+      url "https://github.com/youyo/kintone/releases/download/v0.5.5/kintone_0.5.5_Linux_arm64.tar.gz"
+      sha256 "8619cb4ef03b7169a8620ba1abef237670609b4fa0bfcbf99aafbdb559ceb497"
       define_method(:install) do
         bin.install "kintone"
       end
