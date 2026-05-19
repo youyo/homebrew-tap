@@ -5,21 +5,21 @@
 class Board < Formula
   desc "BOARD API CLI + local MCP server"
   homepage "https://github.com/youyo/board"
-  version "0.11.0"
+  version "0.11.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/board/releases/download/v0.11.0/board_0.11.0_Darwin_x86_64.tar.gz"
-      sha256 "b9b6aa770d576d542db801d4e6b115a448713d2abfd899ff8973821480fe730c"
+      url "https://github.com/youyo/board/releases/download/v0.11.1/board_0.11.1_Darwin_x86_64.tar.gz"
+      sha256 "319244753997b50e9f0b6e4d6929cc51a91aa70a1ca74fb7025b4dc22028cb0c"
 
       define_method(:install) do
         bin.install "board"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/board/releases/download/v0.11.0/board_0.11.0_Darwin_arm64.tar.gz"
-      sha256 "a12b172f6a0403cbdd2da0ab0632c7f4b5c21e529456e7cefff70634e810203d"
+      url "https://github.com/youyo/board/releases/download/v0.11.1/board_0.11.1_Darwin_arm64.tar.gz"
+      sha256 "ee84dfa58bc6265e3052847d791ad7940339207f763991728b4afbbfd125ff2c"
 
       define_method(:install) do
         bin.install "board"
@@ -29,15 +29,15 @@ class Board < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/board/releases/download/v0.11.0/board_0.11.0_Linux_x86_64.tar.gz"
-      sha256 "e4433c92d3c4e16950078052b4ecbeb5e6101d54b911b481f5e86712dd6b1fd5"
+      url "https://github.com/youyo/board/releases/download/v0.11.1/board_0.11.1_Linux_x86_64.tar.gz"
+      sha256 "46715db1bee2b857f7d2aa701de6b30b2b76368961cb542cc83cf68a5bfebc00"
       define_method(:install) do
         bin.install "board"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/board/releases/download/v0.11.0/board_0.11.0_Linux_arm64.tar.gz"
-      sha256 "5375859ae7fd7116c8a3276af5694340d9ec32dd20e2a48024d3157ab0430527"
+      url "https://github.com/youyo/board/releases/download/v0.11.1/board_0.11.1_Linux_arm64.tar.gz"
+      sha256 "8e5e500ff8c5c30af68ddd441b7276154d3cd1efbb96a2ca485db484358b18b9"
       define_method(:install) do
         bin.install "board"
       end
