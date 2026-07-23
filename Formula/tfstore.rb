@@ -5,12 +5,12 @@
 class Tfstore < Formula
   desc "Create a Terraform remote-state backend (S3, native locking)."
   homepage "https://github.com/youyo/tfstore"
-  version "1.0.2"
+  version "2.0.0"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/youyo/tfstore/releases/download/v1.0.2/tfstore_1.0.2_darwin_arm64.tar.gz"
-    sha256 "650cca98e20f22e48004ae0f87bf96afd29456a8f4be0fdeca996b43b89e5f9f"
+    url "https://github.com/youyo/tfstore/releases/download/v2.0.0/tfstore_2.0.0_darwin_arm64.tar.gz"
+    sha256 "8f895ebe3fd602b86caf905402508e69c0444687e38ec19e566c7f54bd90dbf4"
 
     define_method(:install) do
       bin.install "tfstore"
