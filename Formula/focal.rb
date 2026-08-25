@@ -5,21 +5,21 @@
 class Focal < Formula
   desc "Give coding agents visibility, not shell access — restricted SSH inspection CLI + remote MCP"
   homepage "https://github.com/youyo/focal"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/focal/releases/download/v0.2.0/focal_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "dbde8ef6862d062e5844edc536d0e958071e2b5f812b3bae4085d7ffd1854e7c"
+      url "https://github.com/youyo/focal/releases/download/v0.2.1/focal_0.2.1_Darwin_x86_64.tar.gz"
+      sha256 "3cd90e3de3ac931e921cf9e7e8310a4d516489d52e8cac3cd548f1e7afe9150c"
 
       define_method(:install) do
         bin.install "focal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/focal/releases/download/v0.2.0/focal_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "68e3a5871a6a9dfe0e397822f1846cb7a6a01c5068536dd8110d955a01769cc3"
+      url "https://github.com/youyo/focal/releases/download/v0.2.1/focal_0.2.1_Darwin_arm64.tar.gz"
+      sha256 "f482fef01806581a81cf9333154d9944da4ed7bc206df3cc14b7d66af2805807"
 
       define_method(:install) do
         bin.install "focal"
@@ -29,15 +29,15 @@ class Focal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/focal/releases/download/v0.2.0/focal_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "b39975c94ccd3115a1fa02f6d65cd1be170555bc4de0d4243f10382efc7f3f97"
+      url "https://github.com/youyo/focal/releases/download/v0.2.1/focal_0.2.1_Linux_x86_64.tar.gz"
+      sha256 "3b35eccae8af4f8c8c9933c7fc536b0cb380048cd27826d5219baebb0dc03dd7"
       define_method(:install) do
         bin.install "focal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/focal/releases/download/v0.2.0/focal_0.2.0_Linux_arm64.tar.gz"
-      sha256 "352dbf26fd3ebfc5d6af54a32ba321d2ed1b3483acc02ac439242b0439f9b4f1"
+      url "https://github.com/youyo/focal/releases/download/v0.2.1/focal_0.2.1_Linux_arm64.tar.gz"
+      sha256 "2a2f1f9a1502c120c83de8beb21ec5b7176dfc5c5d8d833a27e9e841add95378"
       define_method(:install) do
         bin.install "focal"
       end
