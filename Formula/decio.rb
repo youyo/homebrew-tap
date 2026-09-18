@@ -5,12 +5,12 @@
 class Decio < Formula
   desc "Typed decisions from context with optional command dispatch"
   homepage "https://github.com/youyo/decio"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youyo/decio/releases/download/v0.2.0/decio_0.2.0_darwin_amd64.tar.gz"
-      sha256 "46dbef2821e2b162c58d9722b9bb2d8b9e81288ac95f16d3d12fb498f715bd8b"
+      url "https://github.com/youyo/decio/releases/download/v0.3.0/decio_0.3.0_darwin_amd64.tar.gz"
+      sha256 "5854b146d28b2a6f6c3d27803a7a7be4aded260cb011f421047f19f79bc34792"
 
       def install
         bin.install "decio"
@@ -18,8 +18,8 @@ class Decio < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youyo/decio/releases/download/v0.2.0/decio_0.2.0_darwin_arm64.tar.gz"
-      sha256 "41cec1b5f2a30e76e6cadabd1518da0fdef5fdcd704aec4c81d48827892e4591"
+      url "https://github.com/youyo/decio/releases/download/v0.3.0/decio_0.3.0_darwin_arm64.tar.gz"
+      sha256 "89166c0b5448af5c3edf2061252d340b9f840b488dd166f1d086864be81f58fa"
 
       def install
         bin.install "decio"
@@ -30,16 +30,16 @@ class Decio < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/decio/releases/download/v0.2.0/decio_0.2.0_linux_amd64.tar.gz"
-      sha256 "88938e5a80a9d24b26efdfb3bc036a3ac9b849e20c6c88ec8ece4458c7142ae4"
+      url "https://github.com/youyo/decio/releases/download/v0.3.0/decio_0.3.0_linux_amd64.tar.gz"
+      sha256 "f5dc504b5de036930771bb533e63066e3171b0bd21aed1a9c91806fcb0e35766"
       def install
         bin.install "decio"
         generate_completions_from_executable(bin/"decio", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youyo/decio/releases/download/v0.2.0/decio_0.2.0_linux_arm64.tar.gz"
-      sha256 "69c16cf3c8e2e373458e22a8bc9f38c78d9b1f7a99cf5901857c5b5f7b54e976"
+      url "https://github.com/youyo/decio/releases/download/v0.3.0/decio_0.3.0_linux_arm64.tar.gz"
+      sha256 "b2ad34e2977736678b445c49cc71d00da052584ef8174a7453afaeddaf2ced98"
       def install
         bin.install "decio"
         generate_completions_from_executable(bin/"decio", "completion")
